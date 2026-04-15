@@ -2,8 +2,8 @@
 Your project's description...
 
 ## Environments
-- Preview: https://main--ise-boilerplate--aemdemos.aem.page/
-- Live: https://main--ise-boilerplate--aemdemos.aem.live/
+- Preview: https://main--cbalanescu-marriott--aemdemos.aem.page/
+- Live: https://main--cbalanescu-marriott--aemdemos.aem.live/
 
 ## Documentation
 
