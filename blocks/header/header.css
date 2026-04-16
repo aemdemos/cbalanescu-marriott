@@ -162,8 +162,9 @@ header .nav-brand {
 }
 
 header nav .nav-brand img {
-  width: 128px;
+  width: 120px;
   height: auto;
+  max-height: 40px;
 }
 
 @media (width >= 900px) {
@@ -178,8 +179,9 @@ header nav .nav-brand img {
   }
 
   header nav .nav-brand img {
-    width: 100px;
+    width: 120px;
     height: auto;
+    max-height: 50px;
     filter: brightness(0) invert(1);
   }
 
