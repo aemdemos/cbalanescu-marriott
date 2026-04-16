@@ -1,5 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 100" width="120" height="100">
-  <text x="10" y="25" font-family="Georgia, serif" font-size="9" font-weight="400" fill="#ffffff" letter-spacing="3">MARRIOTT</text>
-  <text x="10" y="55" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#ffffff" letter-spacing="1">BON</text>
-  <text x="10" y="80" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#ffffff" letter-spacing="1">V<tspan fill="#ff8d6b">O</tspan>Y</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 58" width="178" height="58">
+  <!-- Swoosh mark -->
+  <path d="M2 20 C6 8, 18 2, 32 6 C28 2, 18 0, 8 4 C3 6, 1 12, 2 20Z" fill="#ff8d6b"/>
+  <!-- MARRIOTT text -->
+  <text x="8" y="22" font-family="'Playfair Display', Georgia, serif" font-size="10" font-weight="400" fill="currentColor" letter-spacing="4.5">MARRIOTT</text>
+  <!-- BONVOY text -->
+  <text x="8" y="46" font-family="'Playfair Display', Georgia, serif" font-size="24" font-weight="700" fill="currentColor" letter-spacing="2">BONV<tspan fill="#ff8d6b">O</tspan>Y</text>
+  <!-- TM symbol -->
+  <text x="155" y="36" font-family="'Playfair Display', Georgia, serif" font-size="6" fill="currentColor">TM</text>
 </svg>
