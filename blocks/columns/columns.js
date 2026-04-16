@@ -1,12 +1,4 @@
-import { getBlockId } from '../../scripts/scripts.js';
-
 export default function decorate(block) {
-  const blockId = getBlockId('columns');
-  block.setAttribute('id', blockId);
-  block.setAttribute('aria-label', `columns-${blockId}`);
-  block.setAttribute('role', 'region');
-  block.setAttribute('aria-roledescription', 'Columns');
-
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 

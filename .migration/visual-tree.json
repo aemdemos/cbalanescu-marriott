@@ -1,0 +1,680 @@
+{
+  "nodeMap": {
+    "r": "#phoenix-headless",
+    "rc1": "#main-content > div > div:nth-child(1)",
+    "rc1c1": "#main-content > div > div:nth-child(1) > div.fullbleed.m-container-fullbleed",
+    "rc1c1c1": "#container-0d34d204ac > div > div > header > div.m-header__container > div.m-header__black-strip",
+    "rc1c1c2": "#container-0d34d204ac > div > div > header > div.m-header__container > div.m-header__content.container-lg",
+    "rc1c1c2c1": "#container-0d34d204ac > div > div > header > div.m-header__container > div.m-header__content.container-lg > div > div.m-header__all-links > nav.m-header__top-nav.r-upper",
+    "rc1c1c2c2": "#container-0d34d204ac > div > div > header > div.m-header__container > div.m-header__content.container-lg > div > div.m-header__all-links > nav.m-header__nav.l-lower-header",
+    "rc1c2": "#main-content > div > div:nth-child(1) > div.sc-bd72db28-1.kQuauN.m-container-fullbleed.search-form-position",
+    "rc2": "#main-content > div > div.sc-d94deee4-7.jDYHcV.herobanner-fullbleed",
+    "rc2c1": "#herobanner-carousel > div > div.hb__cnt-sec.gradient > div > div:nth-child(2)",
+    "rc2c2": "#herobanner-carousel > div > div.hb__cnt-sec.gradient > div > div:nth-child(3)",
+    "rc2c3": "#herobanner-carousel > div > div.hb__cnt-sec.gradient > div > div:nth-child(4)",
+    "rc3": "#main-content > div > div:nth-child(3)",
+    "rc3c1": "#offers-cards-b5cd3f2a6b > div > div > div > div > div.carousal_header",
+    "rc3c2": "#hpDynamicOffersCarousel",
+    "rc3c2c1": "#hpDynamicOffersCarousel > div.glide__track__pt3",
+    "rc3c2c2": "#hpDynamicOffersCarousel > div.center-align",
+    "rc4": "#main-content > div > div:nth-child(4)",
+    "rc5": "#main-content > div > div:nth-child(5)",
+    "rc5c1": "#main-content > div > div:nth-child(5) > div > div > div > div.carousal_header",
+    "rc5c2": "#hpNewHotelCarousel",
+    "rc5c2c1": "#hpNewHotelCarousel > div.glide__track",
+    "rc5c2c2": "#hpNewHotelCarousel > div.center-align",
+    "rc6": "#main-content > div > div:nth-child(6)",
+    "rc6c1": "#main-content > div > div:nth-child(6) > div > div > div > div.carousal_header",
+    "rc6c2": "#hpDestinationsCarousel",
+    "rc6c2c1": "#hpDestinationsCarousel > div.glide__track",
+    "rc6c2c2": "#hpDestinationsCarousel > div.center-align",
+    "rc7": "#main-content > div > div:nth-child(7)",
+    "rc7c1": "#main-content > div > div:nth-child(7) > div:nth-child(1)",
+    "rc7c2": "#main-content > div > div:nth-child(7) > div:nth-child(2)",
+    "rc7c3": "#main-content > div > div:nth-child(7) > div:nth-child(3)",
+    "rc7c4": "#main-content > div > div:nth-child(7) > div.mt-2.mt-md-5.mb-2.mb-md-5.container.py-5",
+    "rc7c5": "#main-content > div > div:nth-child(7) > div.fullbleed.m-container-fullbleed",
+    "rc7c5c1": "#container-729e40d151 > div > div > div > div > div > div.accordion.panelcontainer.mt-accordion.aem-GridColumn.aem-GridColumn--default--12",
+    "rc7c5c1c1": "#abcd-item-f6a969281d",
+    "rc7c5c1c2": "#abcd-item-551b66aa88",
+    "rc7c5c1c3": "#abcd-item-285f8a677d",
+    "rc7c5c2": "#container-729e40d151 > div > div > div > div > div > div.social-icons.aem-GridColumn.aem-GridColumn--default--12",
+    "rc7c5c3": "#container-729e40d151 > div > div > div > div > div > div.footer.aem-GridColumn.aem-GridColumn--default--12",
+    "rc7c5c3c1": "#container-729e40d151 > div > div > div > div > div > div.footer.aem-GridColumn.aem-GridColumn--default--12 > div.mt-copyright-component > div.mt-copyright-component__copyright.t-label-inverse-alt-xs",
+    "rc7c5c3c2": "#container-729e40d151 > div > div > div > div > div > div.footer.aem-GridColumn.aem-GridColumn--default--12 > div.mt-copyright-component > div.mt-copyright-component__links",
+    "rc7c5c3c3": "#container-729e40d151 > div > div > div > div > div > div.footer.aem-GridColumn.aem-GridColumn--default--12 > div.mt-copyright-component > div.js-session-detail.t-label-inverse-alt-xs"
+  },
+  "text": "r @0,0 1349x3471\n  rc1 @105,0 1140x112\n    rc1c1 @0,0 1349x112\n      rc1c1c1 [bg:color] @0,0 1349x5\n      rc1c1c2 @105,0 1140x116\n        rc1c1c2c1 @269,0 976x61 \"Help Opens a new window Englis...\"\n        rc1c1c2c2 @254,61 976x55 \"Find & Reserve Back Find & Res...\"\n    rc1c2 [2x1] @0,112 1349x128 \"DestinationcomboboxDestination...\"\n  rc2 [bg:color] @105,112 1140x610\n    rc2c1 @97,327 1156x128 \"Up to 20% Off Your Resort Stay...\"\n    rc2c2 @97,455 1156x22 \"Discover our extraordinary por...\"\n    rc2c3 @97,477 1156x117 \"Explore this Offer opensInNewT...\"\n  rc3 @105,722 1140x167\n    rc3c1 [2x1] @105,738 1140x43 \"Limited Time Offers: Grab Your...\"\n    rc3c2 @105,781 1140x92\n      rc3c2c1 [8x1] @105,781 1140x48 \"MULTIPLE LOCATIONSElevated Vac...\"\n      rc3c2c2 @105,829 1140x44\n  rc4 [2x1] @105,921 1140x376 \"Become a Marriott Bonvoy Membe...\"\n  rc5 @105,1329 1140x203\n    rc5c1 @105,1345 1140x63 \"Find The Perfect Hotel For Eve...\"\n    rc5c2 @105,1407 1140x108\n      rc5c2c1 [5x1] @105,1407 1140x64 \"United KingdomMoxy London Picc...\"\n      rc5c2c2 @105,1471 1140x44\n  rc6 @105,1531 1140x203\n    rc6c1 @105,1547 1140x63 \"Your Next Adventure is Calling...\"\n    rc6c2 @105,1610 1140x108\n      rc6c2c1 [6x1] @105,1610 1140x64 \"LondonEdinburghManchesterGlasg...\"\n      rc6c2c2 @105,1674 1140x44\n  rc7 @105,1766 1140x1705\n    rc7c1 [2x1] @105,1766 1140x100 \"Unlock extraordinary experienc...\"\n    rc7c2 @105,1898 1140x100 \"Discover Career OpportunitiesD...\"\n    rc7c3 [5x1] @105,2030 1140x517 \"luxuryHotels that bring destin...\"\n    rc7c4 [3x1] @105,2579 1140x343 \"Marriott Bonvoy™Marriott Bonvo...\"\n    rc7c5 [bg:color] @0,2955 1349x517\n      rc7c5c1 @105,2955 1140x243\n        rc7c5c1c1 @105,2955 1140x85 \"Top Destinations\"\n        rc7c5c1c2 @105,3040 1140x69 \"For Guests\"\n        rc7c5c1c3 @105,3109 1140x69 \"Our Company\"\n      rc7c5c2 [bg:color] @105,3198 1140x67 \"Follow us Facebook Opens a new...\"\n      rc7c5c3 @105,3265 1140x207\n        rc7c5c3c1 [2x1] @105,3285 1140x55 \"© 1996 – 2026 Marriott Interna...\"\n        rc7c5c3c2 [8x5] @105,3347 1140x48 \"Tracking Preferences Careers O...\"\n        rc7c5c3c3 @105,3395 1140x60 \"prod17,40417D42-B78D-50F8-82BD...\"\n",
+  "tree": {
+    "background": {
+      "raw": "rgb(244, 244, 244) none repeat scroll 0% 0% / auto padding-box border-box",
+      "source": "css",
+      "type": "color",
+      "value": "rgb(244, 244, 244)"
+    },
+    "bounds": {
+      "height": 3471,
+      "width": 1349,
+      "x": 0,
+      "y": 0
+    },
+    "children": [
+      {
+        "bounds": {
+          "height": 112,
+          "width": 1140,
+          "x": 105,
+          "y": 0
+        },
+        "children": [
+          {
+            "background": {
+              "raw": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+              "source": "css",
+              "type": "color",
+              "value": "rgb(255, 255, 255)"
+            },
+            "bounds": {
+              "height": 112,
+              "width": 1349,
+              "x": 0,
+              "y": 0
+            },
+            "children": [
+              {
+                "background": {
+                  "raw": "rgb(35, 28, 25) none repeat scroll 0% 0% / auto padding-box border-box",
+                  "source": "css",
+                  "type": "color",
+                  "value": "rgb(35, 28, 25)"
+                },
+                "bounds": {
+                  "height": 5,
+                  "width": 1349,
+                  "x": 0,
+                  "y": 0
+                },
+                "children": [],
+                "className": "m-header__black-strip",
+                "selector": "#container-0d34d204ac > div > div > header > div.m-header__container > div.m-header__black-strip",
+                "tag": "DIV"
+              },
+              {
+                "bounds": {
+                  "height": 116,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 0
+                },
+                "children": [
+                  {
+                    "bounds": {
+                      "height": 61,
+                      "width": 976,
+                      "x": 269,
+                      "y": 0
+                    },
+                    "children": [],
+                    "className": "m-header__top-nav",
+                    "selector": "#container-0d34d204ac > div > div > header > div.m-header__container > div.m-header__content.container-lg > div > div.m-header__all-links > nav.m-header__top-nav.r-upper",
+                    "tag": "NAV",
+                    "text": "Help Opens a new window Englis"
+                  },
+                  {
+                    "bounds": {
+                      "height": 55,
+                      "width": 976,
+                      "x": 254,
+                      "y": 61
+                    },
+                    "children": [],
+                    "className": "m-header__nav",
+                    "selector": "#container-0d34d204ac > div > div > header > div.m-header__container > div.m-header__content.container-lg > div > div.m-header__all-links > nav.m-header__nav.l-lower-header",
+                    "tag": "NAV",
+                    "text": "Find & Reserve Back Find & Res"
+                  }
+                ],
+                "className": "m-header__content",
+                "selector": "#container-0d34d204ac > div > div > header > div.m-header__container > div.m-header__content.container-lg",
+                "tag": "DIV"
+              }
+            ],
+            "className": "fullbleed",
+            "selector": "#main-content > div > div:nth-child(1) > div.fullbleed.m-container-fullbleed",
+            "tag": "DIV"
+          },
+          {
+            "background": {
+              "raw": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+              "source": "css",
+              "type": "color",
+              "value": "rgb(255, 255, 255)"
+            },
+            "bounds": {
+              "height": 128,
+              "width": 1349,
+              "x": 0,
+              "y": 112
+            },
+            "children": [],
+            "className": "sc-bd72db28-1",
+            "layout": "2x1",
+            "selector": "#main-content > div > div:nth-child(1) > div.sc-bd72db28-1.kQuauN.m-container-fullbleed.search-form-position",
+            "tag": "DIV",
+            "text": "DestinationcomboboxDestination"
+          }
+        ],
+        "selector": "#main-content > div > div:nth-child(1)",
+        "tag": "DIV"
+      },
+      {
+        "background": {
+          "raw": "rgb(0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box",
+          "source": "css",
+          "type": "color",
+          "value": "rgb(0, 0, 0)"
+        },
+        "bounds": {
+          "height": 610,
+          "width": 1140,
+          "x": 105,
+          "y": 112
+        },
+        "children": [
+          {
+            "bounds": {
+              "height": 128,
+              "width": 1156,
+              "x": 97,
+              "y": 327
+            },
+            "children": [],
+            "className": "row",
+            "selector": "#herobanner-carousel > div > div.hb__cnt-sec.gradient > div > div:nth-child(2)",
+            "tag": "DIV",
+            "text": "Up to 20% Off Your Resort Stay"
+          },
+          {
+            "bounds": {
+              "height": 22,
+              "width": 1156,
+              "x": 97,
+              "y": 455
+            },
+            "children": [],
+            "className": "row",
+            "selector": "#herobanner-carousel > div > div.hb__cnt-sec.gradient > div > div:nth-child(3)",
+            "tag": "DIV",
+            "text": "Discover our extraordinary por"
+          },
+          {
+            "bounds": {
+              "height": 117,
+              "width": 1156,
+              "x": 97,
+              "y": 477
+            },
+            "children": [],
+            "className": "row",
+            "selector": "#herobanner-carousel > div > div.hb__cnt-sec.gradient > div > div:nth-child(4)",
+            "tag": "DIV",
+            "text": "Explore this Offer opensInNewT"
+          }
+        ],
+        "className": "sc-d94deee4-7",
+        "selector": "#main-content > div > div.sc-d94deee4-7.jDYHcV.herobanner-fullbleed",
+        "tag": "DIV"
+      },
+      {
+        "bounds": {
+          "height": 167,
+          "width": 1140,
+          "x": 105,
+          "y": 722
+        },
+        "children": [
+          {
+            "bounds": {
+              "height": 43,
+              "width": 1140,
+              "x": 105,
+              "y": 738
+            },
+            "children": [],
+            "className": "carousal_header",
+            "layout": "2x1",
+            "selector": "#offers-cards-b5cd3f2a6b > div > div > div > div > div.carousal_header",
+            "tag": "DIV",
+            "text": "Limited Time Offers: Grab Your"
+          },
+          {
+            "bounds": {
+              "height": 92,
+              "width": 1140,
+              "x": 105,
+              "y": 781
+            },
+            "children": [
+              {
+                "bounds": {
+                  "height": 48,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 781
+                },
+                "children": [],
+                "className": "glide__track__pt3",
+                "layout": "8x1",
+                "selector": "#hpDynamicOffersCarousel > div.glide__track__pt3",
+                "tag": "DIV",
+                "text": "MULTIPLE LOCATIONSElevated Vac"
+              },
+              {
+                "bounds": {
+                  "height": 44,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 829
+                },
+                "children": [],
+                "className": "center-align",
+                "selector": "#hpDynamicOffersCarousel > div.center-align",
+                "tag": "DIV"
+              }
+            ],
+            "className": "glide",
+            "id": "hpDynamicOffersCarousel",
+            "selector": "#hpDynamicOffersCarousel",
+            "tag": "DIV"
+          }
+        ],
+        "selector": "#main-content > div > div:nth-child(3)",
+        "tag": "DIV"
+      },
+      {
+        "background": {
+          "raw": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+          "source": "css",
+          "type": "color",
+          "value": "rgb(255, 255, 255)"
+        },
+        "bounds": {
+          "height": 376,
+          "width": 1140,
+          "x": 105,
+          "y": 921
+        },
+        "children": [],
+        "layout": "2x1",
+        "selector": "#main-content > div > div:nth-child(4)",
+        "tag": "DIV",
+        "text": "Become a Marriott Bonvoy Membe"
+      },
+      {
+        "bounds": {
+          "height": 203,
+          "width": 1140,
+          "x": 105,
+          "y": 1329
+        },
+        "children": [
+          {
+            "bounds": {
+              "height": 63,
+              "width": 1140,
+              "x": 105,
+              "y": 1345
+            },
+            "children": [],
+            "className": "carousal_header",
+            "selector": "#main-content > div > div:nth-child(5) > div > div > div > div.carousal_header",
+            "tag": "DIV",
+            "text": "Find The Perfect Hotel For Eve"
+          },
+          {
+            "bounds": {
+              "height": 108,
+              "width": 1140,
+              "x": 105,
+              "y": 1407
+            },
+            "children": [
+              {
+                "bounds": {
+                  "height": 64,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 1407
+                },
+                "children": [],
+                "className": "glide__track",
+                "layout": "5x1",
+                "selector": "#hpNewHotelCarousel > div.glide__track",
+                "tag": "DIV",
+                "text": "United KingdomMoxy London Picc"
+              },
+              {
+                "bounds": {
+                  "height": 44,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 1471
+                },
+                "children": [],
+                "className": "center-align",
+                "selector": "#hpNewHotelCarousel > div.center-align",
+                "tag": "DIV"
+              }
+            ],
+            "className": "glide",
+            "id": "hpNewHotelCarousel",
+            "selector": "#hpNewHotelCarousel",
+            "tag": "DIV"
+          }
+        ],
+        "selector": "#main-content > div > div:nth-child(5)",
+        "tag": "DIV"
+      },
+      {
+        "bounds": {
+          "height": 203,
+          "width": 1140,
+          "x": 105,
+          "y": 1531
+        },
+        "children": [
+          {
+            "bounds": {
+              "height": 63,
+              "width": 1140,
+              "x": 105,
+              "y": 1547
+            },
+            "children": [],
+            "className": "carousal_header",
+            "selector": "#main-content > div > div:nth-child(6) > div > div > div > div.carousal_header",
+            "tag": "DIV",
+            "text": "Your Next Adventure is Calling"
+          },
+          {
+            "bounds": {
+              "height": 108,
+              "width": 1140,
+              "x": 105,
+              "y": 1610
+            },
+            "children": [
+              {
+                "bounds": {
+                  "height": 64,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 1610
+                },
+                "children": [],
+                "className": "glide__track",
+                "layout": "6x1",
+                "selector": "#hpDestinationsCarousel > div.glide__track",
+                "tag": "DIV",
+                "text": "LondonEdinburghManchesterGlasg"
+              },
+              {
+                "bounds": {
+                  "height": 44,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 1674
+                },
+                "children": [],
+                "className": "center-align",
+                "selector": "#hpDestinationsCarousel > div.center-align",
+                "tag": "DIV"
+              }
+            ],
+            "className": "glide",
+            "id": "hpDestinationsCarousel",
+            "selector": "#hpDestinationsCarousel",
+            "tag": "DIV"
+          }
+        ],
+        "selector": "#main-content > div > div:nth-child(6)",
+        "tag": "DIV"
+      },
+      {
+        "bounds": {
+          "height": 1705,
+          "width": 1140,
+          "x": 105,
+          "y": 1766
+        },
+        "children": [
+          {
+            "background": {
+              "raw": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+              "source": "css",
+              "type": "color",
+              "value": "rgb(255, 255, 255)"
+            },
+            "bounds": {
+              "height": 100,
+              "width": 1140,
+              "x": 105,
+              "y": 1766
+            },
+            "children": [],
+            "className": "p-0",
+            "layout": "2x1",
+            "selector": "#main-content > div > div:nth-child(7) > div:nth-child(1)",
+            "tag": "DIV",
+            "text": "Unlock extraordinary experienc"
+          },
+          {
+            "background": {
+              "raw": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+              "source": "css",
+              "type": "color",
+              "value": "rgb(255, 255, 255)"
+            },
+            "bounds": {
+              "height": 100,
+              "width": 1140,
+              "x": 105,
+              "y": 1898
+            },
+            "children": [],
+            "className": "p-0",
+            "selector": "#main-content > div > div:nth-child(7) > div:nth-child(2)",
+            "tag": "DIV",
+            "text": "Discover Career OpportunitiesD"
+          },
+          {
+            "background": {
+              "raw": "rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box",
+              "source": "css",
+              "type": "color",
+              "value": "rgb(255, 255, 255)"
+            },
+            "bounds": {
+              "height": 517,
+              "width": 1140,
+              "x": 105,
+              "y": 2030
+            },
+            "children": [],
+            "layout": "5x1",
+            "selector": "#main-content > div > div:nth-child(7) > div:nth-child(3)",
+            "tag": "DIV",
+            "text": "luxuryHotels that bring destin"
+          },
+          {
+            "bounds": {
+              "height": 343,
+              "width": 1140,
+              "x": 105,
+              "y": 2579
+            },
+            "children": [],
+            "className": "mt-2",
+            "layout": "3x1",
+            "selector": "#main-content > div > div:nth-child(7) > div.mt-2.mt-md-5.mb-2.mb-md-5.container.py-5",
+            "tag": "DIV",
+            "text": "Marriott Bonvoy™Marriott Bonvo"
+          },
+          {
+            "background": {
+              "raw": "rgb(28, 28, 28) none repeat scroll 0% 0% / auto padding-box border-box",
+              "source": "css",
+              "type": "color",
+              "value": "rgb(28, 28, 28)"
+            },
+            "bounds": {
+              "height": 517,
+              "width": 1349,
+              "x": 0,
+              "y": 2955
+            },
+            "children": [
+              {
+                "bounds": {
+                  "height": 243,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 2955
+                },
+                "children": [
+                  {
+                    "bounds": {
+                      "height": 85,
+                      "width": 1140,
+                      "x": 105,
+                      "y": 2955
+                    },
+                    "children": [],
+                    "className": "cmp-accordion__item",
+                    "id": "abcd-item-f6a969281d",
+                    "selector": "#abcd-item-f6a969281d",
+                    "tag": "DIV",
+                    "text": "Top Destinations"
+                  },
+                  {
+                    "bounds": {
+                      "height": 69,
+                      "width": 1140,
+                      "x": 105,
+                      "y": 3040
+                    },
+                    "children": [],
+                    "className": "cmp-accordion__item",
+                    "id": "abcd-item-551b66aa88",
+                    "selector": "#abcd-item-551b66aa88",
+                    "tag": "DIV",
+                    "text": "For Guests"
+                  },
+                  {
+                    "bounds": {
+                      "height": 69,
+                      "width": 1140,
+                      "x": 105,
+                      "y": 3109
+                    },
+                    "children": [],
+                    "className": "cmp-accordion__item",
+                    "id": "abcd-item-285f8a677d",
+                    "selector": "#abcd-item-285f8a677d",
+                    "tag": "DIV",
+                    "text": "Our Company"
+                  }
+                ],
+                "className": "accordion",
+                "selector": "#container-729e40d151 > div > div > div > div > div > div.accordion.panelcontainer.mt-accordion.aem-GridColumn.aem-GridColumn--default--12",
+                "tag": "DIV"
+              },
+              {
+                "background": {
+                  "raw": "rgb(28, 28, 28) none repeat scroll 0% 0% / auto padding-box border-box",
+                  "source": "css",
+                  "type": "color",
+                  "value": "rgb(28, 28, 28)"
+                },
+                "bounds": {
+                  "height": 67,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 3198
+                },
+                "children": [],
+                "className": "social-icons",
+                "selector": "#container-729e40d151 > div > div > div > div > div > div.social-icons.aem-GridColumn.aem-GridColumn--default--12",
+                "tag": "DIV",
+                "text": "Follow us Facebook Opens a new"
+              },
+              {
+                "bounds": {
+                  "height": 207,
+                  "width": 1140,
+                  "x": 105,
+                  "y": 3265
+                },
+                "children": [
+                  {
+                    "bounds": {
+                      "height": 55,
+                      "width": 1140,
+                      "x": 105,
+                      "y": 3285
+                    },
+                    "children": [],
+                    "className": "mt-copyright-component__copyright",
+                    "layout": "2x1",
+                    "selector": "#container-729e40d151 > div > div > div > div > div > div.footer.aem-GridColumn.aem-GridColumn--default--12 > div.mt-copyright-component > div.mt-copyright-component__copyright.t-label-inverse-alt-xs",
+                    "tag": "DIV",
+                    "text": "© 1996 – 2026 Marriott Interna"
+                  },
+                  {
+                    "bounds": {
+                      "height": 48,
+                      "width": 1140,
+                      "x": 105,
+                      "y": 3347
+                    },
+                    "children": [],
+                    "className": "mt-copyright-component__links",
+                    "layout": "8x5",
+                    "selector": "#container-729e40d151 > div > div > div > div > div > div.footer.aem-GridColumn.aem-GridColumn--default--12 > div.mt-copyright-component > div.mt-copyright-component__links",
+                    "tag": "DIV",
+                    "text": "Tracking Preferences Careers O"
+                  },
+                  {
+                    "bounds": {
+                      "height": 60,
+                      "width": 1140,
+                      "x": 105,
+                      "y": 3395
+                    },
+                    "children": [],
+                    "className": "js-session-detail",
+                    "selector": "#container-729e40d151 > div > div > div > div > div > div.footer.aem-GridColumn.aem-GridColumn--default--12 > div.mt-copyright-component > div.js-session-detail.t-label-inverse-alt-xs",
+                    "tag": "DIV",
+                    "text": "prod17,40417D42-B78D-50F8-82BD"
+                  }
+                ],
+                "className": "footer",
+                "selector": "#container-729e40d151 > div > div > div > div > div > div.footer.aem-GridColumn.aem-GridColumn--default--12",
+                "tag": "DIV"
+              }
+            ],
+            "className": "fullbleed",
+            "selector": "#main-content > div > div:nth-child(7) > div.fullbleed.m-container-fullbleed",
+            "tag": "DIV"
+          }
+        ],
+        "selector": "#main-content > div > div:nth-child(7)",
+        "tag": "DIV"
+      }
+    ],
+    "className": "basicpage",
+    "id": "phoenix-headless",
+    "selector": "#phoenix-headless",
+    "tag": "BODY"
+  }
+}

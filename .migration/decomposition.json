@@ -1,0 +1,128 @@
+{
+  "url": "https://www.marriott.com/en-gb/default.mi",
+  "fragments": [
+    {
+      "path": "/nav",
+      "children": [
+        {
+          "type": "block",
+          "name": "nav-bar",
+          "id": "rc1c1",
+          "bounds": { "x": 0, "y": 0, "width": 1349, "height": 112 }
+        }
+      ]
+    },
+    {
+      "path": "/en-gb-default",
+      "children": [
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "block",
+              "name": "search-bar",
+              "id": "rc1c2",
+              "bounds": { "x": 0, "y": 112, "width": 1349, "height": 128 }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "style": "dark",
+          "children": [
+            {
+              "type": "block",
+              "name": "hero-banner",
+              "id": "rc2",
+              "bounds": { "x": 105, "y": 112, "width": 1140, "height": 610 }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "block",
+              "name": "offers-carousel",
+              "id": "rc3",
+              "bounds": { "x": 105, "y": 722, "width": 1140, "height": 167 }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "block",
+              "name": "membership-promo",
+              "id": "rc4",
+              "bounds": { "x": 105, "y": 921, "width": 1140, "height": 376 }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "block",
+              "name": "hotels-carousel",
+              "id": "rc5",
+              "bounds": { "x": 105, "y": 1329, "width": 1140, "height": 203 }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "block",
+              "name": "destinations-carousel",
+              "id": "rc6",
+              "bounds": { "x": 105, "y": 1531, "width": 1140, "height": 203 }
+            }
+          ]
+        },
+        {
+          "type": "section",
+          "children": [
+            {
+              "type": "block",
+              "name": "app-promo",
+              "id": "rc7c1",
+              "bounds": { "x": 105, "y": 1766, "width": 1140, "height": 100 }
+            },
+            {
+              "type": "block",
+              "name": "careers-promo",
+              "id": "rc7c2",
+              "bounds": { "x": 105, "y": 1898, "width": 1140, "height": 100 }
+            },
+            {
+              "type": "block",
+              "name": "brand-showcase",
+              "id": "rc7c3",
+              "bounds": { "x": 105, "y": 2030, "width": 1140, "height": 517 }
+            },
+            {
+              "type": "block",
+              "name": "bonvoy-promo",
+              "id": "rc7c4",
+              "bounds": { "x": 105, "y": 2579, "width": 1140, "height": 343 }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/footer",
+      "children": [
+        {
+          "type": "block",
+          "name": "site-footer",
+          "id": "rc7c5",
+          "bounds": { "x": 0, "y": 2955, "width": 1349, "height": 517 }
+        }
+      ]
+    }
+  ]
+}

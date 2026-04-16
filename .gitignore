@@ -7,9 +7,7 @@ helix-importer-ui
 .DS_Store
 *.bak
 .idea
-localhost.pem
-localhost-key.pem
-.vscode
-.cursor
-Trace*.json
-.migration/*
+
+# Ensure these files are tracked
+!CLAUDE.md
+!AGENTS.md

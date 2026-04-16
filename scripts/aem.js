@@ -11,27 +11,6 @@
  */
 
 /* eslint-env browser */
-/* eslint-disable sonarjs/cognitive-complexity */
-
-/** Max iterations for user/DOM-driven loops (CWE-606). */
-const MAX_LOOP_ITERATIONS = {
-  blockConfigRows: 100,
-  scriptAttrs: 20,
-  pictureBreakpoints: 10,
-  templateThemeClasses: 20,
-  blockColumns: 500,
-  icons: 200,
-  sections: 100,
-  sectionChildren: 200,
-  sectionMetaKeys: 50,
-  sectionMetaStyles: 30,
-  buildBlockRows: 100,
-  buildBlockCols: 50,
-  buildBlockVals: 20,
-  blocksPerSection: 50,
-  wrapTextAttributes: 30,
-};
-
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
   const timeShift = () => (window.performance ? window.performance.now() : Date.now() - window.hlx.rum.firstReadTime);
@@ -45,15 +24,15 @@ function sampleRUM(checkpoint, data) {
         || window.SAMPLE_PAGEVIEWS_AT_RATE
         || params.get('optel')
         || (currentScript && currentScript.dataset.rate);
-      let weight = 100;
-      if (rate === 'on') weight = 1;
-      else if (rate === 'off') weight = 0;
-      else if (rate === 'high') weight = 10;
-      else if (rate === 'low') weight = 1000;
+      const rateValue = {
+        on: 1,
+        off: 0,
+        high: 10,
+        low: 1000,
+      }[rate];
+      const weight = rateValue !== undefined ? rateValue : 100;
       const id = (window.hlx.rum && window.hlx.rum.id) || crypto.randomUUID().slice(-9);
       const isSelected = (window.hlx.rum && window.hlx.rum.isSelected)
-      // RUM id/sampling: Math.random() is intentional (analytics, not crypto)
-      // eslint-disable-next-line sonarjs/pseudo-random -- safe for RUM sampling
         || (weight > 0 && Math.random() * weight < 1);
       // eslint-disable-next-line object-curly-newline, max-len
       window.hlx.rum = {
@@ -80,8 +59,7 @@ function sampleRUM(checkpoint, data) {
                 .trim();
             }
           } catch (err) {
-            // eslint-disable-next-line no-console
-            console.error('error structure was not as expected', error, err);
+            /* error structure was not as expected */
           }
           return errData;
         };
@@ -112,7 +90,7 @@ function sampleRUM(checkpoint, data) {
           }
         });
 
-        sampleRUM.baseURL = sampleRUM.baseURL || new URL(window.RUM_BASE || '/', new URL('https://rum.hlx.page'));
+        sampleRUM.baseURL = sampleRUM.baseURL || new URL(window.RUM_BASE || '/', new URL('https://ot.aem.live'));
         sampleRUM.collectBaseURL = sampleRUM.collectBaseURL || sampleRUM.baseURL;
         sampleRUM.sendPing = (ck, time, pingData = {}) => {
           // eslint-disable-next-line max-len, object-curly-newline
@@ -125,11 +103,10 @@ function sampleRUM(checkpoint, data) {
             ...pingData,
           });
           const urlParams = window.RUM_PARAMS
-            ? `?${new URLSearchParams(window.RUM_PARAMS).toString()}`
+            ? new URLSearchParams(window.RUM_PARAMS).toString() || ''
             : '';
           const { href: url, origin } = new URL(
-            /* eslint-disable secure-coding/no-format-string-injection -- CWE-134: URL components */
-            `.rum/${weight}${urlParams}`,
+            `.rum/${weight}${urlParams ? `?${urlParams}` : ''}`,
             sampleRUM.collectBaseURL,
           );
           const body = origin === window.location.origin
@@ -166,13 +143,9 @@ function sampleRUM(checkpoint, data) {
     }
     document.dispatchEvent(new CustomEvent('rum', { detail: { checkpoint, data } }));
   } catch (error) {
-    // eslint-disable-next-line no-console
-    console.error('something went awry', error);
+    // something went awry
   }
 }
-
-/** DOMPurify options for HTML. Use: DOMPurify.sanitize(html, DOMPURIFY). */
-export const DOMPURIFY = { USE_PROFILES: { html: true } };
 
 /**
  * Setup block utils.
@@ -187,8 +160,7 @@ function setup() {
   const scriptEl = document.querySelector('script[src$="/scripts/scripts.js"]');
   if (scriptEl) {
     try {
-      [window.hlx.codeBasePath] = new
-      URL(scriptEl.src).pathname.split('/scripts/scripts.js');
+      [window.hlx.codeBasePath] = new URL(scriptEl.src).pathname.split('/scripts/scripts.js');
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
@@ -230,20 +202,6 @@ function toCamelCase(name) {
   return toClassName(name).replace(/-([a-z])/g, (g) => g[1].toUpperCase());
 }
 
-/** Keys that must not be used for object/dataset assignment (CWE-915). */
-const UNSAFE_OBJECT_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
-
-/**
- * Returns true if key is safe for plain object or dataset assignment.
- * @param {string} key Property name
- * @returns {boolean}
- */
-function isSafeObjectKey(key) {
-  return typeof key === 'string' && key.length > 0
-    && !UNSAFE_OBJECT_KEYS.has(key)
-    && !key.startsWith('__');
-}
-
 /**
  * Extracts the config from a block.
  * @param {Element} block The block element
@@ -251,9 +209,8 @@ function isSafeObjectKey(key) {
  */
 // eslint-disable-next-line import/prefer-default-export
 function readBlockConfig(block) {
-  const config = new Map();
-  const rows = block.querySelectorAll(':scope > div');
-  [...rows].slice(0, MAX_LOOP_ITERATIONS.blockConfigRows).forEach((row) => {
+  const config = {};
+  block.querySelectorAll(':scope > div').forEach((row) => {
     if (row.children) {
       const cols = [...row.children];
       if (cols[1]) {
@@ -282,11 +239,11 @@ function readBlockConfig(block) {
             value = ps.map((p) => p.textContent);
           }
         } else value = row.children[1].textContent;
-        if (isSafeObjectKey(name)) config.set(name, value);
+        config[name] = value;
       }
     }
   });
-  return Object.fromEntries(config);
+  return config;
 }
 
 /**
@@ -318,14 +275,11 @@ async function loadScript(src, attrs) {
     if (!document.querySelector(`head > script[src="${src}"]`)) {
       const script = document.createElement('script');
       script.src = src;
-      if (attrs && typeof attrs === 'object' && !Array.isArray(attrs)) {
-        Object.keys(attrs)
-          .slice(0, MAX_LOOP_ITERATIONS.scriptAttrs)
-          .filter(isSafeObjectKey)
-          .forEach((attr) => {
-            const val = Object.getOwnPropertyDescriptor(attrs, attr)?.value;
-            if (val !== undefined) script.setAttribute(attr, String(val));
-          });
+      if (attrs) {
+        // eslint-disable-next-line no-restricted-syntax, guard-for-in
+        for (const attr in attrs) {
+          script.setAttribute(attr, attrs[attr]);
+        }
       }
       script.onload = resolve;
       script.onerror = reject;
@@ -368,10 +322,9 @@ function createOptimizedPicture(
   const picture = document.createElement('picture');
   const { origin, pathname } = url;
   const ext = pathname.split('.').pop();
-  const cappedBreakpoints = breakpoints.slice(0, MAX_LOOP_ITERATIONS.pictureBreakpoints);
 
   // webp
-  cappedBreakpoints.forEach((br) => {
+  breakpoints.forEach((br) => {
     const source = document.createElement('source');
     if (br.media) source.setAttribute('media', br.media);
     source.setAttribute('type', 'image/webp');
@@ -383,8 +336,8 @@ function createOptimizedPicture(
   });
 
   // fallback
-  cappedBreakpoints.forEach((br, i) => {
-    if (i < cappedBreakpoints.length - 1) {
+  breakpoints.forEach((br, i) => {
+    if (i < breakpoints.length - 1) {
       const source = document.createElement('source');
       if (br.media) source.setAttribute('media', br.media);
       source.setAttribute(
@@ -412,10 +365,9 @@ function createOptimizedPicture(
  */
 function decorateTemplateAndTheme() {
   const addClasses = (element, classes) => {
-    classes
-      .split(',')
-      .slice(0, MAX_LOOP_ITERATIONS.templateThemeClasses)
-      .forEach((c) => element.classList.add(toClassName(c.trim())));
+    classes.split(',').forEach((c) => {
+      element.classList.add(toClassName(c.trim()));
+    });
   };
   const template = getMetadata('template');
   if (template) addClasses(document.body, template);
@@ -446,28 +398,19 @@ function wrapTextNodes(block) {
   const wrap = (el) => {
     const wrapper = document.createElement('p');
     wrapper.append(...el.childNodes);
-    [...el.attributes]
-      // move the instrumentation from the cell to the new paragraph, also keep the class
-      // in case the content is a buttton and the cell the button-container
-      .filter(({ nodeName }) => nodeName === 'class'
-        || nodeName.startsWith('data-aue')
-        || nodeName.startsWith('data-richtext'))
-      .slice(0, MAX_LOOP_ITERATIONS.wrapTextAttributes)
-      .forEach(({ nodeName, nodeValue }) => {
-        wrapper.setAttribute(nodeName, nodeValue);
-        el.removeAttribute(nodeName);
-      });
     el.append(wrapper);
   };
 
-  const blockColumns = block.querySelectorAll(':scope > div > div');
-  [...blockColumns].slice(0, MAX_LOOP_ITERATIONS.blockColumns).forEach((blockColumn) => {
+  block.querySelectorAll(':scope > div > div').forEach((blockColumn) => {
     if (blockColumn.hasChildNodes()) {
       const hasWrapper = !!blockColumn.firstElementChild
         && validWrappers.some((tagName) => blockColumn.firstElementChild.tagName === tagName);
-      const pictureNeedsWrap = blockColumn.firstElementChild?.tagName === 'PICTURE'
-        && (blockColumn.children.length > 1 || !!blockColumn.textContent.trim());
-      if (!hasWrapper || pictureNeedsWrap) {
+      if (!hasWrapper) {
+        wrap(blockColumn);
+      } else if (
+        blockColumn.firstElementChild.tagName === 'PICTURE'
+        && (blockColumn.children.length > 1 || !!blockColumn.textContent.trim())
+      ) {
         wrap(blockColumn);
       }
     }
@@ -502,55 +445,48 @@ function decorateIcon(span, prefix = '', alt = '') {
  */
 function decorateIcons(element, prefix = '') {
   const icons = element.querySelectorAll('span.icon');
-  [...icons].slice(0, MAX_LOOP_ITERATIONS.icons).forEach((span) => {
+  icons.forEach((span) => {
     decorateIcon(span, prefix);
   });
 }
-
-/* decorateSections moved to scripts.js */
 
 /**
  * Decorates all sections in a container element.
  * @param {Element} main The container element
  */
 function decorateSections(main) {
-  const sectionEls = main.querySelectorAll(':scope > div:not([data-section-status])');
-  [...sectionEls].slice(0, MAX_LOOP_ITERATIONS.sections).forEach((section) => {
+  main.querySelectorAll(':scope > div').forEach((section) => {
     const wrappers = [];
     let defaultContent = false;
-    [...section.children].slice(0, MAX_LOOP_ITERATIONS.sectionChildren).forEach((e) => {
-      if ((e.tagName === 'DIV' && e.className) || !defaultContent) {
+    [...section.children].forEach((e) => {
+      if (e.tagName === 'DIV' || !defaultContent) {
         const wrapper = document.createElement('div');
         wrappers.push(wrapper);
-        defaultContent = e.tagName !== 'DIV' || !e.className;
+        defaultContent = e.tagName !== 'DIV';
         if (defaultContent) wrapper.classList.add('default-content-wrapper');
       }
-      wrappers.at(-1)?.append(e);
+      wrappers[wrappers.length - 1].append(e);
     });
     wrappers.forEach((wrapper) => section.append(wrapper));
     section.classList.add('section');
-    section.setAttribute('data-section-status', 'initialized');
+    section.dataset.sectionStatus = 'initialized';
     section.style.display = 'none';
 
     // Process section metadata
     const sectionMeta = section.querySelector('div.section-metadata');
     if (sectionMeta) {
       const meta = readBlockConfig(sectionMeta);
-      Object.entries(meta)
-        .slice(0, MAX_LOOP_ITERATIONS.sectionMetaKeys)
-        .forEach(([key, value]) => {
-          if (key === 'style') {
-            const styleStr = typeof value === 'string' ? value : '';
-            const styles = styleStr
-              .split(',')
-              .filter((style) => style)
-              .map((style) => toClassName(style.trim()))
-              .slice(0, MAX_LOOP_ITERATIONS.sectionMetaStyles);
-            styles.forEach((style) => section.classList.add(style));
-          } else if (isSafeObjectKey(key)) {
-            section.setAttribute(`data-${key}`, String(value ?? ''));
-          }
-        });
+      Object.keys(meta).forEach((key) => {
+        if (key === 'style') {
+          const styles = meta.style
+            .split(',')
+            .filter((style) => style)
+            .map((style) => toClassName(style.trim()));
+          styles.forEach((style) => section.classList.add(style));
+        } else {
+          section.dataset[toCamelCase(key)] = meta[key];
+        }
+      });
       sectionMeta.parentNode.remove();
     }
   });
@@ -566,19 +502,15 @@ function buildBlock(blockName, content) {
   const blockEl = document.createElement('div');
   // build image block nested div structure
   blockEl.classList.add(blockName);
-  const cappedTable = table.slice(0, MAX_LOOP_ITERATIONS.buildBlockRows);
-  cappedTable.forEach((row) => {
+  table.forEach((row) => {
     const rowEl = document.createElement('div');
-    const cappedRow = [...row].slice(0, MAX_LOOP_ITERATIONS.buildBlockCols);
-    cappedRow.forEach((col) => {
+    row.forEach((col) => {
       const colEl = document.createElement('div');
       const vals = col.elems ? col.elems : [col];
-      [...vals].slice(0, MAX_LOOP_ITERATIONS.buildBlockVals).forEach((val) => {
+      vals.forEach((val) => {
         if (val) {
           if (typeof val === 'string') {
-            colEl.innerHTML += (window.DOMPurify
-              ? window.DOMPurify.sanitize(val, DOMPURIFY)
-              : val);
+            colEl.innerHTML += val;
           } else {
             colEl.appendChild(val);
           }
@@ -613,7 +545,7 @@ async function loadBlock(block) {
             }
           } catch (error) {
             // eslint-disable-next-line no-console
-            console.log(`failed to load module for ${blockName}`, error);
+            console.error(`failed to load module for ${blockName}`, error);
           }
           resolve();
         })();
@@ -621,7 +553,7 @@ async function loadBlock(block) {
       await Promise.all([cssLoaded, decorationComplete]);
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.log(`failed to load block ${blockName}`, error);
+      console.error(`failed to load block ${blockName}`, error);
     }
     block.dataset.blockStatus = 'loaded';
   }
@@ -634,7 +566,7 @@ async function loadBlock(block) {
  */
 function decorateBlock(block) {
   const shortBlockName = block.classList[0];
-  if (shortBlockName && !block.dataset.blockStatus) {
+  if (shortBlockName) {
     block.classList.add('block');
     block.dataset.blockName = shortBlockName;
     block.dataset.blockStatus = 'initialized';
@@ -651,9 +583,7 @@ function decorateBlock(block) {
  * @param {Element} main The container element
  */
 function decorateBlocks(main) {
-  const blocks = main.querySelectorAll('div.section > div > div');
-  const maxBlocks = MAX_LOOP_ITERATIONS.sections * MAX_LOOP_ITERATIONS.blocksPerSection;
-  [...blocks].slice(0, maxBlocks).forEach(decorateBlock);
+  main.querySelectorAll('div.section > div > div').forEach(decorateBlock);
 }
 
 /**
@@ -707,8 +637,7 @@ async function loadSection(section, loadCallback) {
   if (!status || status === 'initialized') {
     section.dataset.sectionStatus = 'loading';
     const blocks = [...section.querySelectorAll('div.block')];
-    const blockLimit = Math.min(blocks.length, MAX_LOOP_ITERATIONS.blocksPerSection);
-    for (let i = 0; i < blockLimit; i += 1) {
+    for (let i = 0; i < blocks.length; i += 1) {
       // eslint-disable-next-line no-await-in-loop
       await loadBlock(blocks[i]);
     }
@@ -722,10 +651,10 @@ async function loadSection(section, loadCallback) {
  * Loads all sections.
  * @param {Element} element The parent element of sections to load
  */
+
 async function loadSections(element) {
   const sections = [...element.querySelectorAll('div.section')];
-  const sectionLimit = Math.min(sections.length, MAX_LOOP_ITERATIONS.sections);
-  for (let i = 0; i < sectionLimit; i += 1) {
+  for (let i = 0; i < sections.length; i += 1) {
     // eslint-disable-next-line no-await-in-loop
     await loadSection(sections[i]);
     if (i === 0 && sampleRUM.enhance) {

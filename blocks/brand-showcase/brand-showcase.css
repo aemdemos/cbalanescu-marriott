@@ -1,0 +1,105 @@
+.brand-showcase {
+  --block-bg: #ffffff;
+  --block-text: #1c1c1c;
+  --block-desc-color: #707070;
+  --block-padding: 32px 0;
+  --cat-padding: 15px;
+  --cat-gap: 16px;
+  --title-size: 18px;
+  --desc-size: 12px;
+  --heading-size: 29px;
+
+  background: var(--block-bg);
+  color: var(--block-text);
+  padding: var(--block-padding);
+  text-align: center;
+}
+
+/* Heading row */
+.brand-showcase > .brand-showcase-heading {
+  margin-bottom: 16px;
+}
+
+.brand-showcase h2 {
+  font-size: var(--heading-size);
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+  padding: 0 0 8px;
+}
+
+/* Categories row container */
+.brand-showcase > .brand-showcase-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 8px;
+  padding-top: 8px;
+}
+
+/* Each category card */
+.brand-showcase .brand-showcase-card {
+  flex: 0 0 20%;
+  max-width: 20%;
+  box-sizing: border-box;
+  padding: var(--cat-padding);
+  text-align: center;
+  vertical-align: top;
+  border-left: 1px solid #e0e0e0;
+}
+
+.brand-showcase .brand-showcase-card:first-child {
+  border-left: none;
+}
+
+.brand-showcase h3 {
+  font-size: var(--title-size);
+  font-weight: 700;
+  text-transform: capitalize;
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.brand-showcase .brand-showcase-desc {
+  font-size: var(--desc-size);
+  color: var(--block-desc-color);
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+/* Logo links grid */
+.brand-showcase .brand-showcase-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cat-gap);
+  justify-content: center;
+  align-items: center;
+}
+
+main .brand-showcase .brand-showcase-logos a:any-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 32px;
+  font-size: 8px;
+  text-decoration: none;
+  color: var(--block-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  line-height: 1.1;
+  word-break: break-word;
+}
+
+@media (width < 900px) {
+  .brand-showcase .brand-showcase-card {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .brand-showcase h2 {
+    font-size: 24px;
+  }
+}

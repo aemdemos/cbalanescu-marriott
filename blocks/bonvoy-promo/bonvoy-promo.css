@@ -1,0 +1,72 @@
+.bonvoy-promo {
+  --block-text: #1c1c1c;
+  --block-heading-size: 18px;
+  --block-link-size: 14px;
+  --block-padding: 32px 0;
+
+  color: var(--block-text);
+  padding: var(--block-padding);
+}
+
+/* Single row containing 3 cells = 3 columns */
+.bonvoy-promo > div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (width >= 900px) {
+  .bonvoy-promo > div {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .bonvoy-promo > div > div {
+    flex: 1;
+  }
+}
+
+.bonvoy-promo h4 {
+  font-size: var(--block-heading-size);
+  font-weight: 700;
+  margin: 0 0 4px;
+  padding-bottom: 8px;
+  line-height: 1.25;
+}
+
+.bonvoy-promo ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bonvoy-promo li {
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+
+.bonvoy-promo li a {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--block-link-size);
+  font-weight: 500;
+  color: var(--block-text);
+  text-decoration: none;
+  padding: 5px 0;
+  line-height: 1.15;
+}
+
+.bonvoy-promo p {
+  margin: 0;
+}
+
+.bonvoy-promo li a::after {
+  content: "›";
+  margin-left: 6px;
+  font-size: 16px;
+}
+
+.bonvoy-promo li a:hover {
+  text-decoration: underline;
+}

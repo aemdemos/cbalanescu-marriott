@@ -1,0 +1,65 @@
+{
+  "colors": {
+    "background": "rgb(244, 244, 244)",
+    "dark": "rgb(0, 0, 0)",
+    "light": "rgb(0, 0, 0)",
+    "link": "rgb(28, 28, 28)",
+    "linkHover": "rgb(0, 86, 179)",
+    "text": "rgb(28, 28, 28)"
+  },
+  "favicons": [
+    {
+      "rel": "icon",
+      "url": "https://www.marriott.com/favicon.ico"
+    },
+    {
+      "rel": "shortcut icon",
+      "url": "https://cache.marriott.com/Images/Mobile/MC_Logos/MarriottApple57x57.png"
+    }
+  ],
+  "fonts": {
+    "body": {
+      "family": "Swiss-721",
+      "familySet": "Swiss-721"
+    },
+    "heading": {
+      "family": "Swiss-721",
+      "familySet": "Swiss-721"
+    },
+    "headingSizes": {
+      "l": {
+        "desktop": "22px",
+        "mobile": "24px"
+      },
+      "m": {
+        "desktop": "18px",
+        "mobile": "20px"
+      },
+      "s": {
+        "desktop": "",
+        "mobile": "18px"
+      },
+      "xl": {
+        "desktop": "40px",
+        "mobile": "28px"
+      },
+      "xs": {
+        "desktop": "",
+        "mobile": "16px"
+      },
+      "xxl": {
+        "desktop": "",
+        "mobile": "36px"
+      }
+    },
+    "sources": {
+      "googleFonts": [],
+      "typekit": null
+    }
+  },
+  "spacing": {
+    "contentMaxWidth": "100%",
+    "navHeight": "61px",
+    "sectionPadding": "0px"
+  }
+}

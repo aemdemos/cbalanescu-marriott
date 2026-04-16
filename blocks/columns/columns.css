@@ -1,5 +1,3 @@
-@import url('./columns-tokens.css');
-
 .columns > div {
   display: flex;
   flex-direction: column;
@@ -25,7 +23,7 @@
   .columns > div {
     align-items: center;
     flex-direction: unset;
-    gap: var(--columns-gap);
+    gap: 24px;
   }
 
   .columns > div > div {

@@ -1,0 +1,107 @@
+.app-promo {
+  --app-promo-bg: #fff;
+  --app-promo-text: #1c1c1c;
+  --app-promo-desc-color: #707070;
+  --app-promo-border: #eee;
+  --app-promo-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --app-promo-radius: 14px;
+  --app-promo-img-size: 100px;
+  --app-promo-gap: 16px;
+}
+
+.app-promo > div {
+  display: grid;
+  grid-template-columns: var(--app-promo-img-size) 1fr auto;
+  align-items: center;
+  gap: var(--app-promo-gap);
+  background: var(--app-promo-bg);
+  border: 1px solid var(--app-promo-border);
+  border-radius: var(--app-promo-radius);
+  box-shadow: var(--app-promo-shadow);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--app-promo-text);
+  min-height: var(--app-promo-img-size);
+}
+
+/* Image cell */
+.app-promo > div > div:first-child {
+  width: var(--app-promo-img-size);
+  height: var(--app-promo-img-size);
+  flex-shrink: 0;
+}
+
+.app-promo > div > div:first-child picture,
+.app-promo > div > div:first-child img {
+  display: block;
+  width: var(--app-promo-img-size);
+  height: var(--app-promo-img-size);
+  object-fit: cover;
+}
+
+/* Text cell */
+.app-promo > div > div:nth-child(2) {
+  padding: 10px 0;
+}
+
+.app-promo h2 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--app-promo-text);
+  margin: 0 0 4px;
+}
+
+.app-promo p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--app-promo-desc-color);
+  margin: 0;
+}
+
+/* Chevron / link cell */
+.app-promo > div > div:last-child {
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.app-promo > div > div:last-child::after {
+  content: "›";
+  font-size: 24px;
+  color: var(--app-promo-desc-color);
+  line-height: 1;
+}
+
+/* Hide the link text - chevron replaces it */
+main .app-promo a.button:any-link,
+.app-promo > div > div:last-child a {
+  display: none;
+}
+
+/* Remove margins from p inside image cell (EDS wraps bare img in p) */
+.app-promo > div > div:first-child p {
+  margin: 0;
+  line-height: 0;
+}
+
+@media (width < 600px) {
+  .app-promo > div {
+    grid-template-columns: 60px 1fr auto;
+  }
+
+  .app-promo > div > div:first-child,
+  .app-promo > div > div:first-child picture,
+  .app-promo > div > div:first-child img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .app-promo h2 {
+    font-size: 16px;
+  }
+
+  .app-promo p {
+    font-size: 12px;
+  }
+}

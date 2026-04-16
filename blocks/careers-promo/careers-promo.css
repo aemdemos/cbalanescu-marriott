@@ -1,0 +1,77 @@
+.careers-promo {
+  --block-bg: #fff;
+  --block-text: #1c1c1c;
+  --block-border: #eee;
+  --block-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --block-img-size: 100px;
+
+  background: var(--block-bg);
+  border: 1px solid var(--block-border);
+  box-shadow: var(--block-shadow);
+  padding: 0;
+  position: relative;
+}
+
+/* Row: the div inside the link (display:contents) */
+.careers-promo > a > div,
+.careers-promo > div {
+  display: grid;
+  grid-template-columns: var(--block-img-size) 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Image cell */
+.careers-promo > a > div > div:first-child,
+.careers-promo > div > div:first-child {
+  width: var(--block-img-size);
+  height: var(--block-img-size);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.careers-promo img {
+  width: var(--block-img-size);
+  height: var(--block-img-size);
+  object-fit: cover;
+  display: block;
+}
+
+.careers-promo picture {
+  display: block;
+  line-height: 0;
+  width: var(--block-img-size);
+  height: var(--block-img-size);
+}
+
+/* Text cell */
+.careers-promo h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--block-text);
+  margin: 0;
+  line-height: 1.25;
+  font-family: sans-serif;
+}
+
+.careers-promo p {
+  display: none;
+}
+
+/* Chevron arrow */
+.careers-promo::after {
+  content: "›";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 28px;
+  color: #707070;
+  font-weight: 300;
+}
+
+main .careers-promo a.button:any-link {
+  color: var(--block-text);
+  text-decoration: none;
+  font-weight: 700;
+}

@@ -1,0 +1,123 @@
+.membership-promo {
+  --promo-bg: #fff;
+  --promo-text: #1c1c1c;
+  --promo-desc: #707070;
+  --promo-padding: 80px 0;
+  --promo-gap: 40px;
+  --promo-btn-radius: 52px;
+
+  background: var(--promo-bg);
+  color: var(--promo-text);
+  padding: var(--promo-padding);
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Row layout: text left, icons right */
+.membership-promo > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--promo-gap);
+}
+
+@media (width >= 900px) {
+  .membership-promo > div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Text column */
+  .membership-promo > div > div:first-child {
+    flex: 0 0 38%;
+  }
+
+  /* Icons column */
+  .membership-promo > div > div:last-child {
+    flex: 0 0 48%;
+  }
+}
+
+/* Heading */
+.membership-promo h2 {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+  color: var(--promo-text);
+}
+
+/* Description */
+.membership-promo > div > div:first-child > p:first-of-type {
+  color: var(--promo-desc);
+  font-size: 16px;
+  margin-bottom: 1.5em;
+}
+
+/* Buttons */
+main .membership-promo .button-wrapper {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+main .membership-promo a.button:any-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: var(--promo-btn-radius);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+main .membership-promo a.button.primary:any-link {
+  background: var(--promo-text);
+  color: #fff;
+  border: 1px solid var(--promo-text);
+}
+
+main .membership-promo a.button.secondary:any-link {
+  background: transparent;
+  color: var(--promo-text);
+  border: 1px solid var(--promo-text);
+}
+
+/* Icons grid */
+.membership-promo > div > div:last-child {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.membership-promo > div > div:last-child p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--promo-text);
+  margin: 0;
+  padding: 16px 0;
+}
+
+/* Icon and label styling from JS decorate */
+.membership-promo .promo-icon {
+  font-size: 36px;
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.membership-promo .promo-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}

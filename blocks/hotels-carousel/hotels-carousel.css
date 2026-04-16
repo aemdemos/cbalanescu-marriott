@@ -1,0 +1,180 @@
+/* Section heading overrides */
+.hotels-carousel-wrapper {
+  margin-top: 0;
+}
+
+.hotels-carousel-container .default-content-wrapper h2 {
+  font-size: 29px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.hotels-carousel-container .default-content-wrapper p {
+  font-size: 16px;
+  color: #1c1c1c;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Hotels Carousel Block */
+.hotels-carousel {
+  --card-radius: 14px;
+  --card-gap: 12px;
+  --card-aspect: 2 / 3;
+  --gradient-bottom: linear-gradient(0deg, rgba(0 0 0 / 0.62), rgba(0 0 0 / 0.54), transparent);
+  --eyebrow-size: 12px;
+  --title-size: 22px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* Carousel track */
+.hotels-carousel .carousel-track {
+  display: flex;
+  gap: var(--card-gap);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding-bottom: 16px;
+}
+
+.hotels-carousel .carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual card */
+.hotels-carousel .card {
+  flex: 0 0 calc(33.333% - var(--card-gap) * 2 / 3);
+  min-width: 260px;
+  scroll-snap-align: start;
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  aspect-ratio: var(--card-aspect);
+}
+
+.hotels-carousel .card a {
+  display: block;
+  position: absolute;
+  inset: 0;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Card image */
+.hotels-carousel .card picture,
+.hotels-carousel .card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text overlay */
+.hotels-carousel .card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--gradient-bottom);
+  padding: 24px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hotels-carousel .card-content .eyebrow {
+  font-size: var(--eyebrow-size);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: #fff;
+  margin: 0;
+}
+
+.hotels-carousel .card-content h3 {
+  font-size: var(--title-size);
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Hide link text */
+.hotels-carousel .card-content .card-link {
+  display: none;
+}
+
+/* Chevron arrow on card */
+.hotels-carousel .card-content::after {
+  content: '\203A';
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+  font-size: 24px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1;
+}
+
+/* Arrow button */
+.hotels-carousel .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -4px;
+  z-index: 2;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0 0 0 / 0.15);
+  font-size: 18px;
+  color: #1c1c1c;
+}
+
+.hotels-carousel .carousel-arrow:hover {
+  background: #f0f0f0;
+}
+
+/* Pagination dots */
+.hotels-carousel .carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.hotels-carousel .carousel-dots button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c4c4c4;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hotels-carousel .carousel-dots button.active {
+  background: #1c1c1c;
+}
+
+@media (max-width: 899px) {
+  .hotels-carousel .card {
+    flex: 0 0 80%;
+  }
+}
